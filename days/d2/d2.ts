@@ -42,3 +42,26 @@ console.log(
     return acc + Number(gameId);
   }, 0)
 );
+
+// PART TWO
+console.log(
+  text.split("\n").reduce((acc, cur) => {
+    const [game, playsRaw] = cur.split(":");
+    const gameId = game.split(" ")[1];
+    const playsArray = playsRaw.split(";");
+    const plays = playsArray.map((play) => play.trim().split(","));
+    const maxOfPlay = plays.reduce(
+      (acc, cur) => {
+        cur.forEach((pull) => {
+          const [amountString, color] = pull.trim().split(" ") as [string, keyof PullColors];
+          const amount = Number(amountString);
+          if (amount > acc[color]) acc[color] = amount;
+        });
+        return acc;
+      },
+      { red: 0, green: 0, blue: 0 }
+    );
+    const powerOfPlay = maxOfPlay["red"] * maxOfPlay["green"] * maxOfPlay["blue"];
+    return acc + powerOfPlay;
+  }, 0)
+);
