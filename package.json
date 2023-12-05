@@ -5,7 +5,8 @@
   "scripts": {
     "d1": "bun days/d1/d1.ts",
     "d2": "bun days/d2/d2.ts",
-    "d3": "bun days/d3/d3.ts"
+    "d3": "bun days/d3/d3.ts",
+    "d4": "bun days/d4/d4.ts"
   },
   "devDependencies": {
     "bun-types": "latest"
