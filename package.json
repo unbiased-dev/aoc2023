@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "d1": "bun days/d1/d1.ts",
-    "d2": "bun days/d2/d2.ts"
+    "d2": "bun days/d2/d2.ts",
+    "d3": "bun days/d3/d3.ts"
   },
   "devDependencies": {
     "bun-types": "latest"
